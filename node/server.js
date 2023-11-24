@@ -28,10 +28,10 @@ const upload = multer({
     },
     fileFilter: function (req, file, cb) {
         // Accept only video file types (you can extend this list)
-        if (file.mimetype.startsWith("video/")) {
+        if (file.mimetype.startsWith("image/")) {
             cb(null, true);
         } else {
-            cb(new Error("Invalid file type. Only videos are allowed."), false);
+            cb(new Error("Invalid file type. Only images are allowed."), false);
         }
     },
 });
